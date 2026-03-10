@@ -424,3 +424,4 @@ FodyWeavers.xsd
 # Exceção para o template (sem dados reais)
 !**/appsettings.example.json
 
+/backend/src/TaskFlow.Web/appsettings.json
