@@ -17,9 +17,10 @@ public static class DependencyInjection
 		services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 		services.AddValidatorsFromAssembly(assembly);
 		services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+        services.AddValidatorsFromAssembly(typeof(IApplicationDbContext).Assembly);
 
-		// Serviços
-		services.AddScoped<IProjectService, ProjectService>();
+        // Serviços
+        services.AddScoped<IProjectService, ProjectService>();
 		services.AddScoped<ITaskService, TaskService>();
 
 		return services;
