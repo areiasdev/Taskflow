@@ -416,3 +416,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Configurações sensíveis
+**/appsettings.json
+**/appsettings.*.json
+
+# Exceção para o template (sem dados reais)
+!**/appsettings.example.json
+
