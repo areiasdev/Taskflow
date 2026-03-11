@@ -12,5 +12,6 @@ public class User : BaseEntity
     public ICollection<Project> OwnedProjects { get; } = new List<Project>();
     public ICollection<TaskAssignee> AssignedTasks { get; } = new List<TaskAssignee>();
     public ICollection<Comment> Comments { get; } = new List<Comment>();
+    public ICollection<RefreshToken> RefreshTokens { get; } = new List<RefreshToken>();
 }
 

@@ -14,6 +14,7 @@ public interface IApplicationDbContext
     DbSet<TaskAssignee> TaskAssignees { get; }
     DbSet<Label> Labels { get; }
     DbSet<TaskLabel> TaskLabels { get; }
+    DbSet<RefreshToken> RefreshTokens { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
