@@ -59,7 +59,14 @@ namespace TaskFlow.Application.Users.Command.Login
             {
                 AccessToken = accessToken,
                 RefreshToken = refreshTokenValue,
-                ExpiresAt = DateTime.UtcNow.AddMinutes(15)
+                ExpiresAt = DateTime.UtcNow.AddMinutes(15),
+                User = new UserDto
+                {
+                    Id = user.Id,
+                    FullName = user.FullName,
+                    Email = user.Email
+                }
+
             });
         }
     }

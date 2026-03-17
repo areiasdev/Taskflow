@@ -14,7 +14,7 @@ public static class ApplicationServiceExtensions
 
         services.AddScoped<IProjectService, ProjectService>();
         services.AddScoped<ITaskService, TaskService>();
-        services.AddAutoMapper(typeof(IApplicationDbContext).Assembly);
+        services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingExtensions).Assembly));
 
 
         return services;

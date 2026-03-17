@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskFlow.Application.Common.Interfaces;
 using TaskFlow.Infrastructure.Data.Context;
+using TaskFlow.Infrastructure.Services;
 
 namespace TaskFlow.Api.Extensions;
 
@@ -14,6 +15,8 @@ public static class InfrastructureServiceExtensions
 		services.AddScoped<IApplicationDbContext>(provider =>
 			provider.GetRequiredService<ApplicationDbContext>());
 
-		return services;
+        services.AddScoped<ITokenService, TokenService>();
+
+        return services;
 	}
 }

@@ -1,6 +1,4 @@
-﻿// Licensed to Devscope.
-
-namespace Taskflow.Web.Infrastructure;
+﻿namespace Taskflow.Web.Infrastructure;
 public abstract class EndpointGroupBase
 {
     public abstract void Map(WebApplication app);

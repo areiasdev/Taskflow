@@ -6,9 +6,8 @@ public class ValidationException : Exception
 {
     public ValidationException(IEnumerable<ValidationFailure> failures)
     {
-        Errors = failures
-            .GroupBy(e => e.PropertyName, e => e.ErrorMessage)
-            .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
+        var errors = failures
+            .Select(f => new FluentValidation.Results.ValidationFailure(f.PropertyName, f.ErrorMessage));
     }
 
     public override string Message => string.Join(", ", Errors.SelectMany(e => e.Value));
