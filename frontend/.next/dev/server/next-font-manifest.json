@@ -1,0 +1,16 @@
+{
+  "app": {
+    "[project]/areiasdev/Taskflow/frontend/src/app/(auth)/login/page": [
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+    ],
+    "[project]/areiasdev/Taskflow/frontend/src/app/(dashboard)/projects/page": [
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+    ],
+    "[project]/areiasdev/Taskflow/frontend/src/app/projects/[id]/page": [
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

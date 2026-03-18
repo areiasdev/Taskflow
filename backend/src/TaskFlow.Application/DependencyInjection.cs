@@ -5,6 +5,7 @@ using TaskFlow.Application.Common.Behaviors;
 using TaskFlow.Application.Common.Interfaces;
 using TaskFlow.Application.Projects.Services;
 using TaskFlow.Application.TaskItems.Services;
+using TaskFlow.Infrastructure.Services;
 
 namespace TaskFlow.Application;
 
@@ -21,8 +22,8 @@ public static class DependencyInjection
 
         // Serviços
         services.AddScoped<IProjectService, ProjectService>();
-		services.AddScoped<ITaskService, TaskService>();
+        services.AddScoped<ITaskService, TaskService>();
 
-		return services;
+        return services;
 	}
 }
